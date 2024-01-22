@@ -12,6 +12,11 @@ jobs:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}    
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }} 
 
+      run: |
+        echo "Hello World"
+        echo "This docker username: $DOCKER_USERNAME"
+        echo "This docker password: $DOCKER_PASSWORD"
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -21,12 +26,8 @@ jobs:
       with:
         repository: "$DOCKER_USERNAME/gitopsfc"
         username: "$DOCKER_USERNAME"
-        password: "$DOCKER_PASSWORD"
-        
-      run: |
-        echo "Hello World"
-        echo "This docker username: $DOCKER_USERNAME"
-        echo "This docker password: $DOCKER_PASSWORD"
+        password: "$DOCKER_PASSWORD"   
+
 
     - name: Build and push image to Dockerhub
       uses: docker/build-push-action@v5
