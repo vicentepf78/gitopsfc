@@ -16,8 +16,8 @@ jobs:
 
     - name: Run Commands with a Secret
       env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}    
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }} 
+          DOCKER_USERNAME: ${{ secrets.DOCKER.DOCKER_USERNAME }}    
+          DOCKER_PASSWORD: ${{ secrets.DOCKER.DOCKER_PASSWORD }} 
 
       run: |
         echo "Hello World"
