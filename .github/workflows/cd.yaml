@@ -46,6 +46,9 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         repository: "vicentepf78/gitopsfc"
+        username: "vicentepf78"
+        password: "dckr_pat_7sehV9JKxGHnmlF8zEItZRKFahc"   
+
         # repository: "$DOCKER_USERNAME/gitopsfc"
         # tags: ${{ github.sha }}, latest.
         push: true
