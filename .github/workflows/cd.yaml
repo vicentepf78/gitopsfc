@@ -48,7 +48,7 @@ jobs:
         repository: "vicentepf78/gitopsfc"
         username: "vicentepf78"
         password: "dckr_pat_7sehV9JKxGHnmlF8zEItZRKFahc"   
-        tags: ${{ github.sha }}, latest.
+        tags: ${{ github.sha }}, latest
 
         # repository: "$DOCKER_USERNAME/gitopsfc"
         # push: true
