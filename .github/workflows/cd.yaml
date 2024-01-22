@@ -23,6 +23,5 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         repository: ${{ secrets.DOCKER_USERNAME }}/gitopsfc
-        # tags: ${{ github.sha }}, latest
         tags: ${{ steps.meta.outputs.tags }}, latest
         labels: ${{ steps.meta.outputs.labels }}
