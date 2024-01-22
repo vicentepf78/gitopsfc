@@ -9,7 +9,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
-      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}    
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }} 
 
     steps:
@@ -19,6 +19,7 @@ jobs:
     - name: Log in to Docker Hub
       uses: docker/login-action@v3
       with:
+        repository: "$DOCKER_USERNAME/gitopsfc"
         username: "$DOCKER_USERNAME"
         password: "$DOCKER_PASSWORD"
 
